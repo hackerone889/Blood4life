@@ -1,15 +1,15 @@
-**Title: [sql-injection] in [Blood4life] <= [v1.0]**
+**Time-Based SQL Injection in Blood4life ≤ v1.0 (login.php emailid parameter)**
 ---
 ## BUG Author: [Sujal Patel]
 ---
 ### Product Information:
 ---
-- Software Link: https://github.com/hackerone889/Blood4life.git
+- Software Link: https://github.com/hackerone889/Blood4life
 - BUG Author: Sujal Patel
 
 ### Vulnerability Details
 ---
-- Type: Time Based SQL Injection
+- Type: Time-Based SQL Injection (CWE-89)
 - Affected URL: http://192.168.29.124/blood/bbdms/login.php
 - Vulnerable Parameter: Emailid
 
@@ -19,10 +19,10 @@
 
 #### Vulnerability Type
 - SQL Injection Vulnerability (CWE-89: SQL Injection)
-- Severity Level: CRITICAL (CVSS: 9.1)
+- Severity: CRITICAL (CVSS v3.1: 9.1)
 
 #### Root Cause
-The code directly concatenates user input into SQL query strings without any parameterization or input validation, allowing attackers to inject malicious SQL code.
+The application concatenates unsanitized user input "emailid" directly into SQL queries without using parameterized statements or validation, enabling an attacker to perform time-based SQL injection.
 
 ![image](https://github.com/user-attachments/assets/0e7d652f-1e2c-4b06-866e-95cfb685c93f)
 
