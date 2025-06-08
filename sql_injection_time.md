@@ -22,7 +22,7 @@
 - Severity: CRITICAL (CVSS v3.1: 9.1)
 
 #### Root Cause
-The application concatenates unsanitized user input "emailid" directly into SQL queries without using parameterized statements or validation, enabling an attacker to perform time-based SQL injection.
+The application directly incorporates unsanitized user input (emailid parameter) into SQL queries without employing parameterized statements or input validation. This improper handling enables attackers to craft time-based SQL injection payloads, leading to unauthorized access or data extraction.
 
 ![image](https://github.com/user-attachments/assets/0e7d652f-1e2c-4b06-866e-95cfb685c93f)
 
